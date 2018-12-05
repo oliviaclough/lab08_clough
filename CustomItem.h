@@ -6,6 +6,9 @@
 
 
 #include "IceCreamItem.h"
+//need to include the parent header file to be able to use the functions stated in there
+//also include it in the .cpp 
+
 #include <string>
 #include <vector>
 
@@ -14,15 +17,15 @@ class CustomItem : public IceCreamItem
 {
  public:
   //functions
-  virtual std::string composeItem(); // ok
+  virtual std::string composeItem(); // creates an ice cream item of custom type
   
-  virtual double getPrice(); // ok
+  virtual double getPrice(); // returns price of the item
   
-  CustomItem(std::string size); // ok
+  CustomItem(std::string size); // constructor - only given size as the customs don't have a name, but set beginning price within the constructor 
   
-  virtual ~CustomItem(); // don't need
+  virtual ~CustomItem(); // don't need ???
   
-  void addTopping(std::string topping); //ok
+  void addTopping(std::string topping); //create a vector to hold the name of the toppings and how much are included in the item, use this function to add the toppings to the item
 
   
  private:
